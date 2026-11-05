@@ -4,7 +4,7 @@
 <meta name="author" content="Ahmet Baran Çekim">
 <meta property="og:title" content="6,4 Trilyon TL Nereye Gitti? | Ahmet Baran Çekim">
 <meta property="og:type" content="article">
-<meta property="og:description" content="28 Ağustos – 2 Kasım 2026: Türkiye'de 6,4 trilyon TL piyasa değeri kaybı; hanehalkı, kurumlar ve yabancılar.">
+<meta property="og:description" content="28 Ağustos – 2 Kasım 2026: Türkiye’de 6,4 trilyon TL piyasa değeri kaybı; hanehalkı, kurumlar ve yabancılar.">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#111111">
 <meta name="description" content="28 Ağustos - 2 Kasım 2026 döneminde hanehalkı, yerli şirketler ve yabancı yatırımcıların borsa, altın ve fon varlıklarındaki değer kaybı. MKK, TEFAS ve TCMB verileriyle.">
@@ -167,19 +167,21 @@ footer{margin:46px 0 54px;font-size:12px;color:var(--ink3);border-top:1px solid 
   table{font-size:10.5px}th,td{padding:4px 6px}
 }
 
-/* İmza: ilk sayfa masthead'inin içinde, yalnızca bu alanı etkiler. */
-.mast .bar{position:relative}
-.mast .bar .author-credit{position:absolute;right:0;top:9px;display:flex;flex-direction:column;align-items:flex-end;gap:3px;max-width:72%;text-transform:none;letter-spacing:normal;line-height:1.3;text-align:right;pointer-events:none}
-.mast .bar .author-credit .author-name{font-weight:600;font-size:11px;color:var(--mastink);letter-spacing:.012em}
-.mast .bar .author-credit .author-disclaimer{font-size:9px;color:var(--mastink2);font-weight:400}
-@media(max-width:720px){.mast .bar{padding-bottom:53px}.mast .bar .author-credit{top:auto;bottom:9px;right:auto;left:0;max-width:100%;align-items:flex-start;text-align:left}.mast .bar .author-credit .author-disclaimer{font-size:9px}}
-@media print{.mast .bar .author-credit{top:4px;max-width:76%}.mast .bar .author-credit .author-name{font-size:9px}.mast .bar .author-credit .author-disclaimer{font-size:7.1px}}
+/* Yazar bilgisi, başlık ve grafik stillerinden bağımsızdır. */
+/* Yazar imzası: araç düğmelerinden ayrı satır, hiçbir örtüşme yok. */
+.mast .author-credit{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:flex-start;gap:2px 13px;margin:17px 0 0;max-width:980px;line-height:1.55;text-align:left;letter-spacing:normal}
+.mast .author-credit .author-name{flex:none;font-weight:600;font-size:12px;color:var(--mastink);letter-spacing:.012em}
+.mast .author-credit .author-disclaimer{flex:1 1 390px;font-size:11px;color:var(--mastink2);font-weight:400;min-width:0;max-width:710px;overflow-wrap:anywhere}
+.mast h1{margin-top:36px}
+@media(max-width:720px){.mast .bar{align-items:flex-start;gap:13px}.mast .author-credit{display:block;margin-top:18px}.mast .author-credit .author-name{display:block;margin-bottom:3px}.mast .author-credit .author-disclaimer{display:block;font-size:11px;line-height:1.5}}
+@media(max-width:400px){.mast .bar .r{flex-wrap:wrap}.mast h1{font-size:clamp(37px,9vw,45px)}.mast .dek{font-size:18px}}
+@media print{.mast .author-credit{margin-top:8px;gap:2px 8px}.mast .author-credit .author-name{font-size:9.5px}.mast .author-credit .author-disclaimer{font-size:8.5px}.mast h1{margin-top:24px}}
 </style></head>
 <body>
 <header class="mast">
   <div class="w">
-    <div class="bar"><span>Araştırma notu · 4 Kasım 2026</span><div class="author-credit"><span class="author-name">Ahmet Baran Çekim</span><span class="author-disclaimer">Bu çalışma kişisel değerlendirmelerimi içermektedir, çalıştığım kurumun görüşlerini temsil etmemektedir.</span></div>
-      <span class="r"><button class="btn solid" id="b-pdf" type="button"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/></svg>PDF olarak kaydet</button><button class="btn" id="b-theme" type="button">Tema</button></span></div>
+    <div class="bar"><span>Araştırma notu · 4 Kasım 2026</span>
+      <span class="r"><button class="btn solid" id="b-pdf" type="button"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/></svg>PDF olarak kaydet</button><button class="btn" id="b-theme" type="button">Tema</button></span></div><div class="author-credit"><span class="author-name">Ahmet Baran Çekim</span><span class="author-disclaimer">Bu çalışma kişisel değerlendirmelerimi içermektedir, çalıştığım kurumun görüşlerini temsil etmemektedir.</span></div>
     <h1>6,4 Trilyon TL Nereye Gitti?</h1>
     <p class="dek">28 Ağustos ile 2 Kasım arasında hanehalkı, yerli şirketler ve yabancı yatırımcılar borsa, altın ve fon varlıklarında toplam 6,4 trilyon TL değer kaybetti. Kaybın %77'si hanehalkında, %56'sı altında toplandı. SPK'nın tasfiyeye aldığı fonların payı %11.</p>
     <div class="hero">
@@ -449,7 +451,7 @@ const nice = (mn, mx, n = 5) => { const span = mx - mn || 1, st = Math.pow(10, M
 function hbar(id, rows, o = {}) {
   const box = $(id); box.replaceChildren();
   const W = width(box), narrow = W < 460;
-  const bh = o.bh || (narrow ? 13 : 16), gap = narrow ? 24 : (o.gap || 9), lab = narrow ? 0 : (o.lab || Math.min(180, W * .33)), top = 2;
+  const bh = o.bh || (narrow ? 13 : 16), gap = narrow ? 24 : (o.gap || 9), lab = narrow ? 0 : (o.lab || Math.min(180, W * .33)), top = narrow ? 16 : 2;
   const rh = bh + gap, H = top + rows.length * rh + 2;
   const svg = svgOf(box, W, H, o.aria);
   const vals = rows.map((r) => r.v), mn = Math.min(0, ...vals), mx = Math.max(0, ...vals);
@@ -459,7 +461,7 @@ function hbar(id, rows, o = {}) {
   const tip = tipFor(box);
   rows.forEach((r, i) => {
     const y = top + i * rh + (narrow ? 12 : 0);
-    if (narrow) tx(svg, 0, y - 4, r.l, {'font-size': 12, fill: r.strong ? 'var(--ink)' : 'var(--ink2)', 'font-weight': r.strong ? 600 : 400});
+    if (narrow) tx(svg, 0, y - 10, r.l, {'font-size': 12, fill: r.strong ? 'var(--ink)' : 'var(--ink2)', 'font-weight': r.strong ? 600 : 400});
     else tx(svg, lab - 10, y + bh / 2, r.l, {'text-anchor': 'end', 'dominant-baseline': 'middle', fill: r.strong ? 'var(--ink)' : 'var(--ink2)', 'font-weight': r.strong ? 600 : 400});
     const neg = r.v < 0;
     el('path', {d: rbarH(sx(0), sx(r.v), y, bh), fill: r.c || 'var(--ink3)', 'fill-opacity': r.op || 1}, svg);
@@ -490,7 +492,7 @@ function hpair(id, rows, o = {}) { // rows: {l, a, b, c, la, lb}
 // ---------- vertical columns ----------
 function vcols(id, cats, series, o = {}) { // series: [{name,c,vals,op}], o.stack
   const box = $(id); box.replaceChildren();
-  const W = width(box), H = o.H || 230, m = {l: o.ml ?? 44, r: 8, t: 20, b: o.mb || 28};
+  const W = width(box), H = o.H || 230, m = {l: o.ml ?? 44, r: 8, t: 20, b: o.mb || (W < 350 ? 67 : W < 480 ? 48 : 28)};
   const svg = svgOf(box, W, H, o.aria);
   const tot = cats.map((_, i) => o.stack ? series.reduce((s, se) => s + Math.max(0, se.vals[i]), 0) : Math.max(...series.map((se) => se.vals[i])));
   const lo = o.stack ? 0 : Math.min(0, ...series.flatMap((s) => s.vals)), hi = o.max || Math.max(...tot) * 1.08;
@@ -509,7 +511,18 @@ function vcols(id, cats, series, o = {}) { // series: [{name,c,vals,op}], o.stac
         if (o.vlab) tx(svg, x + bw / 2, v >= 0 ? sy(v) - 5 : sy(v) + 13, (o.vf || f0.format)(v), {'text-anchor': 'middle', 'font-size': 11, fill: se.op && se.op < 1 ? 'var(--ink3)' : 'var(--ink)'}); }
     });
     if (o.stack && o.tlab) tx(svg, gx + gw / 2, sy(run) - 6, o.tlab(i, run), {'text-anchor': 'middle', 'font-size': 11.5, fill: 'var(--ink)', 'font-weight': 600});
-    tx(svg, gx + gw / 2, H - m.b + 16, c, {'text-anchor': 'middle', 'font-size': 11.5, fill: 'var(--ink2)'});
+    if (W < 480 && c.includes(' ')) {
+      const parts = c.trim().split(' ');
+      const last = parts[parts.length - 1];
+      let first = parts.slice(0,-1).join(' '), second = last;
+      // "Ticari krediler", "Fon ve diğer" gibi uzun kategorilerde de alt satıra böl.
+      if (first.length > 15 || (parts.length === 2 && !/[+−%0-9]/.test(last))) {
+        const cut = Math.ceil(parts.length / 2); first = parts.slice(0,cut).join(' '); second = parts.slice(cut).join(' ');
+      }
+      const t = tx(svg, gx + gw / 2, H - m.b + 13 + (W < 350 && i % 2 ? 22 : 0), '', {'text-anchor': 'middle', 'font-size': W < 350 ? 10 : 11, fill:'var(--ink2)'});
+      el('tspan', {x: gx + gw / 2, dy: 0}, t).textContent = first;
+      el('tspan', {x: gx + gw / 2, dy: 14}, t).textContent = second;
+    } else tx(svg, gx + gw / 2, H - m.b + 16 + (W < 350 && i % 2 ? 22 : 0), c, {'text-anchor': 'middle', 'font-size': 11.5, fill: 'var(--ink2)'});
     if (o.tip) { const hit = el('rect', {x: m.l + i * cw, y: m.t, width: cw, height: H - m.t - m.b, fill: 'transparent'}, svg); hit.addEventListener('mousemove', (e) => tip.show(e, o.tip(i))); hit.addEventListener('mouseleave', () => tip.hide()); }
   });
 }
@@ -628,7 +641,7 @@ function drawWF() {
     el('line', {x1: a, x2: b, y1: H - m.b + 26, y2: H - m.b + 26, stroke: 'var(--line2)'}, svg);
     tx(svg, (a + b) / 2, H - m.b + 41, k2 === 'Şirket ve kurumlar' && b - a < 150 ? 'Şirketler' : k2, {'text-anchor': 'middle', 'font-size': 11, fill: 'var(--ink3)'}); });
 }
-$('wf-seg').addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; wfU = b.dataset.u; [...$('wf-seg').children].forEach((x) => x.setAttribute('aria-pressed', x === b)); drawWF(); });
+$('wf-seg').addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; wfU = b.dataset.u; [...$('wf-seg').children].forEach((x) => x.setAttribute('aria-pressed', x === b)); drawWF(); tidyCharts(); });
 
 // ---------- history ----------
 function drawHist() {
@@ -646,7 +659,7 @@ function drawHist() {
     el('rect', {x: x + .15, y: Math.min(sy(0), sy(r.r2)), width: Math.max(.6, cw - .3), height: Math.abs(sy(r.r2) - sy(0)), fill: isNow ? 'var(--hi)' : r.r2 < -15 ? 'var(--ink3)' : 'var(--dg)', 'fill-opacity': isNow ? 1 : r.r2 < -15 ? .9 : .45}, svg);
   });
   top5.forEach((r) => { const i = d.indexOf(r), x = m.l + (i + .5) * cw, now = r.ay >= '2026-09';
-    const lab = ayL(r.ay) + '  ' + pc(r.r2); const right = x > W * .8;
+    const lab = (W < 430 ? ayS(r.ay) : ayL(r.ay)) + '  ' + pc(r.r2); const right = x > W * .8;
     tx(svg, x + (right ? -6 : 6), sy(r.r2) + 4, lab, {'font-size': now ? 12 : 11, fill: now ? 'var(--ink)' : 'var(--ink2)', 'font-weight': now ? 600 : 400, 'text-anchor': right ? 'end' : 'start'}); });
   for (let yv = 2006; yv <= 2026; yv += 4) { const i = d.findIndex((r) => r.ay === yv + '-01'); if (i >= 0) tx(svg, m.l + i * cw, H - 7, String(yv), {'text-anchor': 'middle', 'font-size': 11, fill: 'var(--ink3)'}); }
   const hit = el('rect', {x: m.l, y: 0, width: W - m.l - m.r, height: H, fill: 'transparent'}, svg);
@@ -846,13 +859,13 @@ function drawYS() {
   $('t-ysinif').innerHTML = `<thead><tr><th>${k === 'usd' ? 'Milyar $' : 'Milyar TL'}</th><th class="n">Ağustos</th><th class="n">Eylül</th><th class="n">Ekim</th><th class="n">Ağustos - Ekim</th><th class="n">%</th></tr></thead><tbody>` +
     rows.map((r, i) => `<tr${i === rows.length - 1 ? ' class="sum"' : ''}><td>${r[0]}</td><td class="n">${f.format(r[1])}</td><td class="n">${f.format(r[2])}</td><td class="n">${f.format(r[3])}</td><td class="n">${sg(r[3] - r[1], f)}</td><td class="n">${pc(100 * (r[3] / r[1] - 1), f0)}</td></tr>`).join('') + '</tbody>';
 }
-$('ys-seg').addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; ysU = b.dataset.u; [...$('ys-seg').children].forEach((x) => x.setAttribute('aria-pressed', x === b)); drawYS(); });
+$('ys-seg').addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; ysU = b.dataset.u; [...$('ys-seg').children].forEach((x) => x.setAttribute('aria-pressed', x === b)); drawYS(); tidyCharts(); });
 const YF = V.yab_fon, yfA = YF.find((r) => r.ay === '2026-08'), yfS = YF.find((r) => r.ay === '2026-09'), yfE = YF.find((r) => r.ay === '2026-10');
 $('yf-tiles').innerHTML = [['Ağustos', yfA], ['Eylül', yfS], ['Ekim', yfE]].map(([l, r]) => `<div><div class="l">${l} 2026</div><div class="x">${f0.format(r.tuzel)}<span>milyar TL</span></div><div class="d">${f1.format(r.tuzel / r.usd)} milyar $ · ${f0.format(r.n_tuzel)} kurum</div></div>`).join('') +
   `<div><div class="l">Eylül'de fondan çıkan para, en az</div><div class="x">≥ ${f0.format(Math.floor((yfA.tuzel * (1 + (-22.8) / 100) - yfS.tuzel) / 10) * 10)}<span>milyar TL</span></div><div class="d">fonlar piyasa kadar (−%22,8) düştü varsayımıyla</div></div>`;
 function drawYFon() {
   const xs = YF.map((r) => r.ay);
-  line('c-yfon', xs, [{name: 'Kurumsal fon', c: 'var(--yb)', vals: YF.map((r) => r.tuzel), endl: f0.format(yfE.tuzel), marks: [{i: xs.indexOf('2026-02'), t: '196', dy: -9}, {i: xs.indexOf('2026-03'), t: 'Mart 62', dy: 16}, {i: xs.indexOf('2026-08'), t: '366', dy: -9}, {i: xs.indexOf('2026-09'), t: 'Eylül 79', dy: 16}]},
+  line('c-yfon', xs, [{name: 'Kurumsal fon', c: 'var(--yb)', vals: YF.map((r) => r.tuzel), endl: f0.format(yfE.tuzel), marks: [{i: xs.indexOf('2026-02'), t: '196', dy: -9}, {i: xs.indexOf('2026-03'), t: 'Mart 62', dy: 16}, {i: xs.indexOf('2026-08'), t: '366', dy: -9}, {i: xs.indexOf('2026-09'), t: 'Eylül 79', dy: width($('c-yfon')) < 350 ? -8 : 16}]},
     {name: 'Özel sektör borçlanma', c: 'var(--yb)', dash: '4 3', vals: YF.map((r) => r.osba), endl: f0.format(yfE.osba), dy: 6},
     {name: 'Bireysel fon', c: 'var(--ink3)', vals: YF.map((r) => r.gercek), endl: f0.format(yfE.gercek), dy: -8}],
     {min: 0, ticks: (i) => xs[i].endsWith('-01') || xs[i].endsWith('-07'), xf: ayS, tx: ayL, tf: (v) => f1.format(v) + ' milyar TL', tipx: (i) => YF[i].usd ? `<br>Kurumsal fon ${f2.format(YF[i].tuzel / YF[i].usd)} milyar $` : '', mr: 44, H: PRINT ? 220 : 270});
@@ -878,7 +891,7 @@ function drawYK() {
   const s0 = rows.reduce((s, r) => s + r.a, 0), s1 = rows.reduce((s, r) => s + r.b, 0);
   $('yk-note').textContent = `Toplam ${f1.format(s0)} milyar $'dan ${f1.format(s1)} milyar $'a, ${pc(100 * (s1 / s0 - 1))}. MKK ay sonu verisi, TCMB döviz alış kuruyla. Fon vb., yabancı fonlar ve benzeri kurumlar demek.`;
 }
-$('yk-seg').addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; ykV = b.dataset.v; [...$('yk-seg').children].forEach((x) => x.setAttribute('aria-pressed', x === b)); drawYK(); });
+$('yk-seg').addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; ykV = b.dataset.v; [...$('yk-seg').children].forEach((x) => x.setAttribute('aria-pressed', x === b)); drawYK(); tidyCharts(); });
 const UL = {'AMERİKA BİRLEŞİK DEVLETLERİ': 'ABD', 'BİRLEŞİK KRALLIK': 'Birleşik Krallık', 'KATAR': 'Katar', 'İSPANYA': 'İspanya', 'HOLLANDA': 'Hollanda', 'LÜKSEMBURG': 'Lüksemburg', 'CAYMAN ADALARI': 'Cayman Adaları', 'İRLANDA': 'İrlanda', 'İSVİÇRE': 'İsviçre', 'FRANSA': 'Fransa', 'ALMANYA': 'Almanya', 'KANADA': 'Kanada', 'AVUSTURYA': 'Avusturya'};
 function drawUlke() {
   const d = V.ulke.filter((r) => UL[r.ulke]).sort((a, b) => b.v10 - a.v10).slice(0, 10).map((r) => ({...r, p: 100 * (r.v10 / r.v8 - 1)}));
@@ -938,14 +951,44 @@ $('b-theme').addEventListener('click', () => {
   const cur = document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   document.documentElement.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark');
 });
+// Responsive SVG type pass: keep tick labels from colliding, clamp labels to chart edges.
+function tidyCharts() {
+  if (PRINT) return;
+  document.querySelectorAll('.chart svg').forEach((svg) => {
+    const vb = svg.viewBox.baseVal, W = vb.width, H = vb.height;
+    const texts = [...svg.querySelectorAll('text')].filter(t => t.getAttribute('visibility') !== 'hidden');
+    const bbox = t => {try {return t.getBBox()}catch(e){return {x:0,y:0,width:0,height:0}}};
+    texts.forEach(t => {
+      const b=bbox(t);if(!b.width || t.getAttribute('x')===null) return;
+      let delta=0;
+      if(b.x < 3) delta=3-b.x;
+      else if(b.x+b.width>W-3) delta=W-3-b.x-b.width;
+      if(delta) t.setAttribute('x',Number(t.getAttribute('x'))+delta);
+    });
+    // Tarih ekseni için birinci ve son etiket önceliklidir; aradakiler sığdığı kadar gösterilir.
+    const ticks = texts.filter(t => Number(t.getAttribute('y'))>=H-23 && bbox(t).height>0)
+      .sort((a,b)=>bbox(a).x-bbox(b).x);
+    const selected=[];
+    if(ticks.length){
+      selected.push(ticks[0]);
+      if(ticks.length>1 && bbox(ticks[ticks.length-1]).x - (bbox(ticks[0]).x+bbox(ticks[0]).width)>7)
+        selected.push(ticks[ticks.length-1]);
+      for (const t of ticks.slice(1,-1)) {
+        const b=bbox(t);
+        if(selected.every(a=>{const aa=bbox(a);return b.x>aa.x+aa.width+7 || aa.x>b.x+b.width+7;}))selected.push(t);
+      }
+      ticks.forEach(t=>{if(!selected.includes(t))t.setAttribute('visibility','hidden')});
+    }
+  });
+}
 const all = () => { drawHero(); drawWF(); drawHist(); drawYPayLong(); drawTakvim(); drawArea(); drawGrp(); drawYat(); drawYasPay(); drawYasCik(); drawBolge(); drawMap(); drawDilim();
   drawHHK(); drawSeyir(); drawFlow(); drawYasFon(); drawFonDilim(); drawTon(); drawGram(); drawFK(); drawTas(); drawTop(); drawBES();
   drawTZ(); drawTZF(); drawTC(); drawTCpay(); drawTzFon(); drawDibsY(); drawYS(); drawYFon(); drawYDec(); drawYPay(); drawYK(); drawUlke(); drawDibsAll(); drawSC(); };
-all();
-window.__redraw = (p) => { PRINT = !!p; all(); };
-let rt; addEventListener('resize', () => { if (PRINT) return; clearTimeout(rt); rt = setTimeout(all, 120); });
+all(); tidyCharts();
+window.__redraw = (p) => { PRINT = !!p; all(); if(!PRINT)tidyCharts(); };
+let rt; addEventListener('resize', () => { if (PRINT) return; clearTimeout(rt); rt = setTimeout(() => {all();tidyCharts();}, 120); });
 addEventListener('beforeprint', () => { PRINT = true; all(); });
-addEventListener('afterprint', () => { PRINT = false; all(); });
+addEventListener('afterprint', () => { PRINT = false; all(); tidyCharts(); });
 $('b-pdf').addEventListener('click', () => { PRINT = true; all(); setTimeout(() => window.print(), 80); });
 })();
 </script>
