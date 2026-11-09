@@ -271,7 +271,7 @@ footer{margin:46px 0 54px;font-size:12px;color:var(--ink3);border-top:1px solid 
 
 <section class="s pb" id="hh">
   <div class="sh"><div class="sn">3 · Hanehalkı</div><h2>Hanehalkı kaybının %65'i altından geliyor</h2>
-  <p class="lead">Hanehalkının borsa, altın, fon ve BES varlıklarındaki kayıp 6 Kasım'da <strong>3.479 milyar TL</strong>. Bu tutar yastık altı altın dahil hanehalkı varlıklarının %5,8'ine denk geliyor. Altın 2.278 milyar TL, doğrudan hisse 923 milyar TL değer kaybetti. Fon ve BES'in katkısıyla dört günde 114 milyar TL geri kazanıldı.</p></div>
+  <p class="lead">Hanehalkının borsa, altın, fon ve BES varlıklarındaki kayıp 6 Kasım'da <strong>3.479 milyar TL</strong>. Bu tutar yastık altı altın dahil hanehalkı varlıklarının %5,9'una denk geliyor. Altın 2.278 milyar TL, doğrudan hisse 923 milyar TL değer kaybetti. Fon ve BES'in katkısıyla dört günde 114 milyar TL geri kazanıldı.</p></div>
   <blockquote class="quote">Hanehalkının her 100 TL'lik kaybının 65 TL'si altından geliyor.<small>Hanehalkının elindeki yaklaşık 4.307 ton altının 3.700 tonu yastık altında, 607 tonu bankada. Gram altın 28 Ağustos'taki 7.092 TL'den 6 Kasım'da 6.563 TL'ye geriledi.</small></blockquote>
   <div class="g2">
     <div class="card"><h3>Hanehalkı kaybı, kalem bazında</h3><p class="cs">Milyar TL, 28 Ağustos - 6 Kasım</p><div class="chart" id="c-hhk"></div></div>
@@ -579,7 +579,7 @@ const AT = (a, m, k) => a.find((r) => r.ay === m)[k];
 const dY = (u, k) => B.dibs.find((x) => x.uyruk === u && x.kimlik === k);
 
 // ---------- hero ----------
-$('h-n').innerHTML = `${f1.format(-T.all / 1000)}<small>trilyon TL</small>`;
+$('h-n').innerHTML = `${f2.format(-T.all / 1000)}<small>trilyon TL</small>`;
 $('h-s').textContent = `Yaklaşık ${f0.format(-T.all / usd1)} milyar dolar. Hanehalkının payı %${f0.format(100 * T.hh / T.all)}.`;
 const HERO = [
   ['Hanehalkı · altın', hh.altin, 'var(--hh)', 1], ['Hanehalkı · hisse', hh.hisse, 'var(--hh)', .72], ['Hanehalkı · fon ve BES', hh.fon + hh.bes, 'var(--hh)', .45],
