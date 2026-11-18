@@ -1,15 +1,16 @@
 # Türkiye'nin MTM Bilançosu: Hanehalkı, Tüzel Kişiler ve Yabancılar
 
-**Ahmet Baran Çekim** · 18 Kasım 2026 veri notu
+**Ahmet Baran Çekim** · 18 Kasım 2026 güncellemesi
 
-Türkiye'de 28 Ağustos 2026 sonrasında borsa, altın ve fon piyasalarının yatırımcı kesimlerine etkisini izleyen araştırma.
+Türkiye'de 28 Ağustos 2026 sonrasında borsa, altın ve yatırım fonu piyasalarının yatırımcı gruplarına etkisi.
 
-**Sürüm ayrımı:** 6 Kasım 2026 kapanışı itibarıyla yayımlanmış üç kesimli toplam MTM model kaybı yaklaşık 4,69 trilyon TL'dir. 17 Kasım altın fiyatları ve 15 Kasım tasfiye ödeme bilgileri bağımsız olarak güncellendi. Hanehalkı, kurumlar ve yabancıların **17 Kasım tarihli tam MTM toplamı henüz yayınlanmadı**. Eski model toplamını yeni tarihliymiş gibi kullanmayın.
+**17 Kasım fiyatlarıyla koşullu toplam MTM modeli: −5,68 trilyon TL.** Hanehalkı −4,51 trilyon TL, yerli tüzel/kurumlar −0,56 trilyon TL, yabancılar −0,61 trilyon TL. Bu tutarlar son kesin MKK pay kırılımı ve 131 fonun tüm nakit tasfiye ödeme kayıtları olmadan bağımsız gerçekleşmiş zarar olarak ileri sürülemez. Eski 6 Kasım model toplamı −4,69 trilyon TL idi.
 
-- [Raporu aç](index.html)
-- [EVDS altın, döviz ve yabancı hisse stoku CSV](data/evds_20260828_20261117.csv)
-- [Veri eksikleri, Bloomberg/MKK/TEFAS ihracı ve uzlaştırma standardı](VERI_IHTIYACLARI_20261118.md)
+- [Güncellenmiş interaktif HTML rapor](index.html)
+- [18 Kasım teknik analiz, kaynak denetimi ve eksik veri dökümü](ANALIZ_20261118.md)
+- [EVDS altın, döviz ve yabancı hisse stoku (17 Kasım'a kadar)](data/evds_20260828_20261117.csv)
+- [Öncelikli veri ihtiyacı ve hesap denetim standardı](VERI_IHTIYACLARI_20261118.md)
 
-Ana riskler: fon tasfiye ödemelerinin fiyat getirisi gibi muhasebeleştirilmesi, 129 fonluk eski modelle 131 fonluk resmî evrenin karıştırılması, yatırım fonları ile dayanak payların iki kez sayılması ve MKK portföy stok değişiminin doğrudan MTM olarak yorumlanması.
+**Yapısal düzeltmeler:** MKK stok değişimi fiyat getirisiyle aynı değil; 17 Kasım hesaplaması eski modelin saklama stok-duyarlılığına dayalıdır ve gerçek regresyon betası değildir. Para çıkışı piyasa zararı gibi hesaplanamaz. 161 milyar TL tasfiye ödemesi brüt model MTM kaybından mekanik olarak düşülmez. BYF/EMK fon alt varlıkları birden fazla toplama girerek çifte sayılamaz. Altın stoku resmi sayım değil, altın ithalatı/üretimi ve 1984 öncesi stok varsayımıyla kurulan modeldir.
 
-Bu çalışma kişisel değerlendirmelerimi içermektedir, çalıştığım kurumun görüşlerini temsil etmemektedir.
+Gelişmeleri değerlendiren çalışma kişisel niteliktedir, çalıştığım kurumun görüşlerini temsil etmez.
